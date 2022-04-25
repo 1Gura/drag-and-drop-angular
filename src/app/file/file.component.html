@@ -1,5 +1,12 @@
+<div class="app-file">
 <div class="file">
   <div class="file__container">
-    <input type="file" class="file"/>
+    <div class="background-text">Закинь в меня файл</div>
+    <input type="file" (change)="getFile($event)" class="file__item"/>
   </div>
+  <div class="file__result" *ngIf="file">
+    Имя файла: {{file.name}}
+  </div>
+</div>
+  <button *ngIf="file" (click)="uploadFile()">Отправить файл</button>
 </div>
