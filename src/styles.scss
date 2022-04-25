@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bulma/bulma';
+
+//global styles
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+$family-font: 'Nunito', sans-serif;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $family-font;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  background-image: url('./assets/background.svg');
+  background-size: cover;
+  overflow-y: auto;
+
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
