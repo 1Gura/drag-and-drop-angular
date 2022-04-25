@@ -1,0 +1,17 @@
+<div class="board-wrapper">
+  <div class="board__columns" cdkDropListGroup>
+    <div class="board__column" *ngFor="let column of board.columns">
+      <div class="column__title">
+        {{column.name}}
+      </div>
+      <div class="tasks-container"
+           cdkDropList
+           [cdkDropListData]="column.tasks"
+           (cdkDropListDropped)="drop($event)">
+        <div class="task" *ngFor="let todo of column.tasks" cdkDrag>
+          {{todo}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
